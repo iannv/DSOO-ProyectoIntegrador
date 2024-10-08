@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Pqc.Crypto.Lms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,7 +64,17 @@ namespace DSOO_ProyectoIntegrador
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
+            DataTable tablaLogin = new DataTable();
+            Datos.Clientes dato = new Datos.Clientes();
+            tablaLogin = dato.Nuevo_Cliente(txtUsuario.Text, txtClave.Text);
+            if (tablaLogin.Rows.Count > 0)
+            {
+            MessageBox.Show("Ingreso exitoso");
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o password incorrecto");
+            }
         }
     }
 }
