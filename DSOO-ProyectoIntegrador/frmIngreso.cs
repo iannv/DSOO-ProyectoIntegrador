@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace DSOO_ProyectoIntegrador
 {
-    public partial class Form1 : Form
+    public partial class frmIngreso : Form
     {
-        public Form1()
+        public frmIngreso()
         {
             InitializeComponent();
         }
@@ -65,11 +65,16 @@ namespace DSOO_ProyectoIntegrador
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             DataTable tablaLogin = new DataTable();
-            Datos.Clientes dato = new Datos.Clientes();
-            tablaLogin = dato.Nuevo_Cliente(txtUsuario.Text, txtClave.Text);
+            Datos.Usuarios dato = new Datos.Usuarios();
+            tablaLogin = dato.Log_Usu(txtUsuario.Text, txtClave.Text);
             if (tablaLogin.Rows.Count > 0)
             {
-            MessageBox.Show("Ingreso exitoso");
+                MessageBox.Show("Ingreso exitoso", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmPrincipal Principal = new frmPrincipal();
+                Principal.rol = Convert.ToString(tablaLogin.Rows[0][0]);
+                Principal.usuario = Convert.ToString(txtUsuario.Text);
+                Principal.Show();
+                this.Hide();
             }
             else
             {

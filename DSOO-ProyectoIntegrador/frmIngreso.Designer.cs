@@ -1,6 +1,6 @@
 ﻿namespace DSOO_ProyectoIntegrador
 {
-    partial class Form1
+    partial class frmIngreso
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngreso));
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
@@ -69,7 +69,7 @@
             // 
             this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
             this.txtClave.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtClave.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtClave.Location = new System.Drawing.Point(470, 166);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(243, 23);
@@ -88,7 +88,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Form1
+            // frmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,7 +100,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnIngresar);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Name = "Form1";
+            this.Name = "frmIngreso";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
