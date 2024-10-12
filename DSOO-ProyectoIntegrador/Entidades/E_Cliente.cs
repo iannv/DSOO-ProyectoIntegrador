@@ -14,7 +14,7 @@ namespace DSOO_ProyectoIntegrador.Entidades
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string TDoc { get; set; }
-        public int Dni { get; set; }
+        public int Doc { get; set; }
         public string Domicilio { get; set; }
         public int Telefono { get; set; }
         public string Email { get; set; }

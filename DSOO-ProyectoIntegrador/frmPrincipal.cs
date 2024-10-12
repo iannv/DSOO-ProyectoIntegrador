@@ -30,7 +30,9 @@ namespace DSOO_ProyectoIntegrador
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-
+            frmRegistro registro = new frmRegistro();
+            registro.Show();
+            this.Hide();
         }
 
 
