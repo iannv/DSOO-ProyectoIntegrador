@@ -30,11 +30,17 @@ namespace DSOO_ProyectoIntegrador
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            frmRegistro registro = new frmRegistro();
+            Form registro = new frmRegistro();
             registro.Show();
             this.Hide();
+
         }
 
-
+        private void btnVerCarnet_Click(object sender, EventArgs e)
+        {
+            Form carnet = new Carnet();
+            carnet.Show();
+            this.Hide();
+        }
     }
 }

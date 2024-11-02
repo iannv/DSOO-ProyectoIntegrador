@@ -31,6 +31,7 @@
             this.lblIngresar = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
+            this.btnVerCarnet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblIngresar
@@ -68,7 +69,7 @@
             this.btnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistro.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegistro.Location = new System.Drawing.Point(278, 165);
+            this.btnRegistro.Location = new System.Drawing.Point(259, 80);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(263, 103);
             this.btnRegistro.TabIndex = 2;
@@ -76,12 +77,27 @@
             this.btnRegistro.UseVisualStyleBackColor = false;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
+            // btnVerCarnet
+            // 
+            this.btnVerCarnet.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnVerCarnet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerCarnet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerCarnet.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerCarnet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnVerCarnet.Location = new System.Drawing.Point(259, 267);
+            this.btnVerCarnet.Name = "btnVerCarnet";
+            this.btnVerCarnet.Size = new System.Drawing.Size(263, 103);
+            this.btnVerCarnet.TabIndex = 3;
+            this.btnVerCarnet.Text = "Ver Carnet";
+            this.btnVerCarnet.UseVisualStyleBackColor = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVerCarnet);
             this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblIngresar);
@@ -98,5 +114,6 @@
         private System.Windows.Forms.Label lblIngresar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistro;
+        private System.Windows.Forms.Button btnVerCarnet;
     }
 }

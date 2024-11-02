@@ -43,8 +43,10 @@ namespace DSOO_ProyectoIntegrador
                 cliente.AptoFisico = chkApto.Checked;
                 cliente.Socio = chkSocio.Checked;
 
-                Datos.Clientes clientes = new Datos.Clientes(); 
+                Datos.Clientes clientes = new Datos.Clientes();
                 respuesta = clientes.Nuevo_Cliente(cliente);
+                MessageBox.Show("Respuesta de Nuevo_Cliente: " + respuesta, "Depuración", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
                 bool esnumero = int.TryParse(respuesta, out int codigo);
                 if (esnumero)
@@ -57,20 +59,24 @@ namespace DSOO_ProyectoIntegrador
                     }
                     else
                     {
-                        DialogResult result = MessageBox.Show("Se registro con exito con el Nro de Carnet " + respuesta, "AVISO DEL SISTEMA",
-                        MessageBoxButtons.OK, MessageBoxIcon.Question);
-                        if (result == DialogResult.OK)
-                        {
-                            frmPrincipal principal = new frmPrincipal();
-                            principal.Show();
-                            this.Hide();
-                        }
+                        Form carnet = new Carnet();
+                        carnet.Show();
+                        this.Hide();
+
+                        //MessageBox.Show("Se registró con éxito con el Nro de Carnet " + respuesta, "AVISO DEL SISTEMA",
+                        //MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                 }
-
+                else
+                {
+                    // Si la respuesta no es numérica, mostrar un mensaje de error
+                    MessageBox.Show("Error en el registro, intente nuevamente.", "AVISO DEL SISTEMA",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
@@ -91,6 +97,16 @@ namespace DSOO_ProyectoIntegrador
             frmPrincipal principal = new frmPrincipal();
             principal.Show();
             this.Hide();
+        }
+
+        private void frmRegistro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

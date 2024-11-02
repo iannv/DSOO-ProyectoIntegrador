@@ -34,7 +34,6 @@ D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DS
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO-ProyectoIntegrador.csproj.AssemblyReference.cache
-D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.Form1.resources
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.Properties.Resources.resources
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO-ProyectoIntegrador.csproj.GenerateResource.cache
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO-ProyectoIntegrador.csproj.CoreCompileInputs.cache
@@ -86,3 +85,8 @@ C:\Users\Feli\src\Tecnicatura IFTS 29\2°C-1°A\Desarrollo de Sistemas Orientado
 C:\Users\Feli\src\Tecnicatura IFTS 29\2°C-1°A\Desarrollo de Sistemas Orientado a Objetos\Proyecto integrador\Proyecto\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmIngreso.resources
 C:\Users\Feli\src\Tecnicatura IFTS 29\2°C-1°A\Desarrollo de Sistemas Orientado a Objetos\Proyecto integrador\Proyecto\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmPrincipal.resources
 C:\Users\Feli\src\Tecnicatura IFTS 29\2°C-1°A\Desarrollo de Sistemas Orientado a Objetos\Proyecto integrador\Proyecto\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmRegistro.resources
+D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmIngreso.resources
+D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmPrincipal.resources
+D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmRegistro.resources
+D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.PagoInicial.resources
+D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.Carnet.resources
