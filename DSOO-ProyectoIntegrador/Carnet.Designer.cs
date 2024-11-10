@@ -41,15 +41,19 @@
             this.lblFechaAlta = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.imgCarnet = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.picCarnet = new System.Windows.Forms.PictureBox();
+            this.lblSocioNoSocio = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.pnlCarnet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCarnet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCarnet)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCarnet
             // 
             this.pnlCarnet.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlCarnet.Controls.Add(this.lblSocioNoSocio);
+            this.pnlCarnet.Controls.Add(this.picCarnet);
             this.pnlCarnet.Controls.Add(this.lblNumCarnetA);
             this.pnlCarnet.Controls.Add(this.lblDniA);
             this.pnlCarnet.Controls.Add(this.lblApellidoA);
@@ -61,7 +65,6 @@
             this.pnlCarnet.Controls.Add(this.lblFechaAlta);
             this.pnlCarnet.Controls.Add(this.lblApellido);
             this.pnlCarnet.Controls.Add(this.lblNombre);
-            this.pnlCarnet.Controls.Add(this.imgCarnet);
             this.pnlCarnet.Controls.Add(this.label1);
             this.pnlCarnet.Location = new System.Drawing.Point(123, 53);
             this.pnlCarnet.Name = "pnlCarnet";
@@ -73,11 +76,11 @@
             this.lblNumCarnetA.AutoSize = true;
             this.lblNumCarnetA.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumCarnetA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
-            this.lblNumCarnetA.Location = new System.Drawing.Point(314, 282);
+            this.lblNumCarnetA.Location = new System.Drawing.Point(314, 287);
             this.lblNumCarnetA.Name = "lblNumCarnetA";
-            this.lblNumCarnetA.Size = new System.Drawing.Size(84, 26);
+            this.lblNumCarnetA.Size = new System.Drawing.Size(48, 26);
             this.lblNumCarnetA.TabIndex = 13;
-            this.lblNumCarnetA.Text = "________";
+            this.lblNumCarnetA.Text = "____";
             // 
             // lblDniA
             // 
@@ -152,7 +155,7 @@
             this.lblNumCarnet.AutoSize = true;
             this.lblNumCarnet.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumCarnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
-            this.lblNumCarnet.Location = new System.Drawing.Point(279, 282);
+            this.lblNumCarnet.Location = new System.Drawing.Point(279, 288);
             this.lblNumCarnet.Name = "lblNumCarnet";
             this.lblNumCarnet.Size = new System.Drawing.Size(36, 26);
             this.lblNumCarnet.TabIndex = 5;
@@ -191,16 +194,6 @@
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
-            // imgCarnet
-            // 
-            this.imgCarnet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgCarnet.BackgroundImage")));
-            this.imgCarnet.Location = new System.Drawing.Point(61, 100);
-            this.imgCarnet.Name = "imgCarnet";
-            this.imgCarnet.Size = new System.Drawing.Size(170, 150);
-            this.imgCarnet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgCarnet.TabIndex = 0;
-            this.imgCarnet.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -212,19 +205,57 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "________________________________________________________________";
             // 
+            // picCarnet
+            // 
+            this.picCarnet.Image = ((System.Drawing.Image)(resources.GetObject("picCarnet.Image")));
+            this.picCarnet.Location = new System.Drawing.Point(63, 113);
+            this.picCarnet.Name = "picCarnet";
+            this.picCarnet.Size = new System.Drawing.Size(191, 175);
+            this.picCarnet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCarnet.TabIndex = 14;
+            this.picCarnet.TabStop = false;
+            // 
+            // lblSocioNoSocio
+            // 
+            this.lblSocioNoSocio.AutoSize = true;
+            this.lblSocioNoSocio.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSocioNoSocio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
+            this.lblSocioNoSocio.Location = new System.Drawing.Point(384, 287);
+            this.lblSocioNoSocio.Name = "lblSocioNoSocio";
+            this.lblSocioNoSocio.Size = new System.Drawing.Size(84, 26);
+            this.lblSocioNoSocio.TabIndex = 15;
+            this.lblSocioNoSocio.Text = "________";
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnImprimir.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnImprimir.Location = new System.Drawing.Point(353, 402);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(158, 39);
+            this.btnImprimir.TabIndex = 21;
+            this.btnImprimir.Text = "IMPRIMIR";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // Carnet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.pnlCarnet);
             this.Name = "Carnet";
             this.Text = "Carnet";
             this.Load += new System.EventHandler(this.Carnet_Load);
             this.pnlCarnet.ResumeLayout(false);
             this.pnlCarnet.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCarnet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCarnet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,7 +263,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlCarnet;
-        private System.Windows.Forms.PictureBox imgCarnet;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNumCarnet;
@@ -245,5 +275,8 @@
         public System.Windows.Forms.Label lblApellidoA;
         public System.Windows.Forms.Label lblNombreA;
         public System.Windows.Forms.Label lblNumCarnetA;
+        private System.Windows.Forms.PictureBox picCarnet;
+        public System.Windows.Forms.Label lblSocioNoSocio;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

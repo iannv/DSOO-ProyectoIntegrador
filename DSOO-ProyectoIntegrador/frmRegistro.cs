@@ -60,14 +60,20 @@ namespace DSOO_ProyectoIntegrador
                     else
                     {
                         Carnet carnet = new Carnet();
-                        carnet.Nombre = txtNombre.Text;
-                        carnet.Apellido = txtApellido.Text;
+                        carnet.Nombre = txtNombre.Text.ToUpper();
+                        carnet.Apellido = txtApellido.Text.ToUpper();
                         carnet.Dni = txtDocumento.Text;
                         carnet.FechaAlta = DateTime.Now;
                         carnet.NumCarnet = Convert.ToInt32(respuesta);
 
-
-                        //Se puede probar hace la logica para que diga el carnet si socio es true o false
+                        if (chkSocio.Checked)
+                        {
+                            carnet.SocioNoSocio = "SOCIO";
+                        }
+                        else
+                        {
+                            carnet.SocioNoSocio = "NO SOCIO";
+                        }
 
                         carnet.Show();
                         this.Hide();
