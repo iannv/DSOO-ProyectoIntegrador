@@ -75,9 +75,9 @@
             this.lblNumCarnetA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
             this.lblNumCarnetA.Location = new System.Drawing.Point(314, 282);
             this.lblNumCarnetA.Name = "lblNumCarnetA";
-            this.lblNumCarnetA.Size = new System.Drawing.Size(51, 26);
+            this.lblNumCarnetA.Size = new System.Drawing.Size(84, 26);
             this.lblNumCarnetA.TabIndex = 13;
-            this.lblNumCarnetA.Text = "XXX";
+            this.lblNumCarnetA.Text = "________";
             // 
             // lblDniA
             // 
@@ -87,9 +87,9 @@
             this.lblDniA.ForeColor = System.Drawing.Color.DimGray;
             this.lblDniA.Location = new System.Drawing.Point(388, 183);
             this.lblDniA.Name = "lblDniA";
-            this.lblDniA.Size = new System.Drawing.Size(78, 22);
+            this.lblDniA.Size = new System.Drawing.Size(80, 22);
             this.lblDniA.TabIndex = 12;
-            this.lblDniA.Text = "Nombre";
+            this.lblDniA.Text = "__________";
             // 
             // lblApellidoA
             // 
@@ -99,9 +99,8 @@
             this.lblApellidoA.ForeColor = System.Drawing.Color.DimGray;
             this.lblApellidoA.Location = new System.Drawing.Point(388, 142);
             this.lblApellidoA.Name = "lblApellidoA";
-            this.lblApellidoA.Size = new System.Drawing.Size(78, 22);
+            this.lblApellidoA.Size = new System.Drawing.Size(0, 22);
             this.lblApellidoA.TabIndex = 11;
-            this.lblApellidoA.Text = "Nombre";
             // 
             // lblNombreA
             // 
@@ -111,9 +110,8 @@
             this.lblNombreA.ForeColor = System.Drawing.Color.DimGray;
             this.lblNombreA.Location = new System.Drawing.Point(388, 102);
             this.lblNombreA.Name = "lblNombreA";
-            this.lblNombreA.Size = new System.Drawing.Size(78, 22);
+            this.lblNombreA.Size = new System.Drawing.Size(0, 22);
             this.lblNombreA.TabIndex = 10;
-            this.lblNombreA.Text = "Nombre";
             // 
             // lblFechaAltaA
             // 
@@ -123,9 +121,9 @@
             this.lblFechaAltaA.ForeColor = System.Drawing.Color.DimGray;
             this.lblFechaAltaA.Location = new System.Drawing.Point(388, 221);
             this.lblFechaAltaA.Name = "lblFechaAltaA";
-            this.lblFechaAltaA.Size = new System.Drawing.Size(78, 22);
+            this.lblFechaAltaA.Size = new System.Drawing.Size(80, 22);
             this.lblFechaAltaA.TabIndex = 9;
-            this.lblFechaAltaA.Text = "Nombre";
+            this.lblFechaAltaA.Text = "__________";
             // 
             // lblTitulo
             // 
@@ -223,6 +221,7 @@
             this.Controls.Add(this.pnlCarnet);
             this.Name = "Carnet";
             this.Text = "Carnet";
+            this.Load += new System.EventHandler(this.Carnet_Load);
             this.pnlCarnet.ResumeLayout(false);
             this.pnlCarnet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarnet)).EndInit();
@@ -241,10 +240,10 @@
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblFechaAltaA;
-        private System.Windows.Forms.Label lblDniA;
-        private System.Windows.Forms.Label lblApellidoA;
-        private System.Windows.Forms.Label lblNombreA;
-        private System.Windows.Forms.Label lblNumCarnetA;
+        public System.Windows.Forms.Label lblFechaAltaA;
+        public System.Windows.Forms.Label lblDniA;
+        public System.Windows.Forms.Label lblApellidoA;
+        public System.Windows.Forms.Label lblNombreA;
+        public System.Windows.Forms.Label lblNumCarnetA;
     }
 }

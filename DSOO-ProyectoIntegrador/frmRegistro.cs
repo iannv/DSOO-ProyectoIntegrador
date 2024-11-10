@@ -59,7 +59,16 @@ namespace DSOO_ProyectoIntegrador
                     }
                     else
                     {
-                        Form carnet = new Carnet();
+                        Carnet carnet = new Carnet();
+                        carnet.Nombre = txtNombre.Text;
+                        carnet.Apellido = txtApellido.Text;
+                        carnet.Dni = txtDocumento.Text;
+                        carnet.FechaAlta = DateTime.Now;
+                        carnet.NumCarnet = Convert.ToInt32(respuesta);
+
+
+                        //Se puede probar hace la logica para que diga el carnet si socio es true o false
+
                         carnet.Show();
                         this.Hide();
 
@@ -70,7 +79,6 @@ namespace DSOO_ProyectoIntegrador
                 }
                 else
                 {
-                    // Si la respuesta no es numérica, mostrar un mensaje de error
                     MessageBox.Show("Error en el registro, intente nuevamente.", "AVISO DEL SISTEMA",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
