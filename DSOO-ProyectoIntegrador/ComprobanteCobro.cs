@@ -20,9 +20,11 @@ namespace DSOO_ProyectoIntegrador
         public DateTime FechaPago { get; set; }
         public DateTime FechaVencimiento { get; set; }
 
-        public ComprobanteCobro()
+        public ComprobanteCobro(int idCliente, int idCuota)
         {
             InitializeComponent();
+            IdCliente = idCliente;
+            IdCuota = idCuota;
         }
 
         private void ComprobanteCobro_Load(object sender, EventArgs e)
@@ -36,12 +38,18 @@ namespace DSOO_ProyectoIntegrador
                     string query = @"
                 SELECT 
                     cliente.nombre AS nombreCliente, 
-                    cuota.monto AS montoCuota 
+                    cliente.dni AS dniCliente,
+                    cuota.monto AS montoCuota,
+                    cuota.fechaPago AS fechaPago,
+                    cuota.fechaVencimiento AS fechaVencimiento
                 FROM cliente
                 JOIN cuota ON cliente.idCliente = cuota.idCliente
-                WHERE cliente.idCliente = 452";
+                WHERE cliente.idCliente = @IdCliente
+                AND cuota.idCuota = @IdCuota;";
 
                     MySqlCommand cmd = new MySqlCommand(query, sqlCon);
+                    cmd.Parameters.AddWithValue("@IdCliente", IdCliente);
+                    cmd.Parameters.AddWithValue("@IdCuota", IdCuota);
 
                     // Leer los resultados
                     using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -49,11 +57,17 @@ namespace DSOO_ProyectoIntegrador
                         if (reader.Read()) 
                         {
                             // Asignamos el resultado a las labels correspondientes
+                            lblFechaC.Text = Convert.ToDateTime(reader["fechaPago"]).ToString("dd/MM/yyyy");
                             lblNombreC.Text = reader["nombreCliente"].ToString(); 
-                            lblMontoC.Text = reader["montoCuota"].ToString();     
+                            lblMontoC.Text = reader["montoCuota"].ToString();
+                            lblDniC.Text = reader["dniCliente"].ToString();
+                            lblVtoC.Text = Convert.ToDateTime(reader["fechaVencimiento"]).ToString("dd/MM/yyyy");
                         }
                         else
                         {
+                            lblFechaC.Text = "No encontrado";
+                            lblDniC.Text = "No encontrado";
+                            lblVtoC.Text = "No encontrado";
                             lblNombreC.Text = "No encontrado";
                             lblMontoC.Text = "No encontrado";
                         }
@@ -90,6 +104,13 @@ namespace DSOO_ProyectoIntegrador
             this.DrawToBitmap(img, bounds);
             Point p = new Point(100, 100);
             e.Graphics.DrawImage(img, p);
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            this.Hide();
         }
     }
 }

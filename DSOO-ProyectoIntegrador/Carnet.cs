@@ -60,5 +60,12 @@ namespace DSOO_ProyectoIntegrador
             principal.Show();
             this.Close();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            this.Hide();
+        }
     }
 }

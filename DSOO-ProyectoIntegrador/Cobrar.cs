@@ -1,6 +1,7 @@
 ﻿using DSOO_ProyectoIntegrador.Datos;
 using DSOO_ProyectoIntegrador.Entidades;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace DSOO_ProyectoIntegrador
 {
     public partial class Cobrar : Form
     {
+        private int clienteId;
         public Cobrar()
         {
             InitializeComponent();
@@ -26,6 +28,9 @@ namespace DSOO_ProyectoIntegrador
             btnCobrar.BackColor = Color.DarkGray;
 
             lblSocioNoSocio.Visible = false;
+
+            // Inicializamos el ID del cliente con un valor inválido
+            clienteId = -1;
         }
 
         // Función para buscar al cliente
@@ -39,38 +44,52 @@ namespace DSOO_ProyectoIntegrador
             }
             else
             {
-                string respuesta;
-                E_Cuota cuota = new E_Cuota();
+                //string respuesta;
+                //E_Cuota cuota = new E_Cuota();
 
-                cuota.Cliente = new E_Cliente();
-                cuota.Cliente.Doc = Convert.ToInt32(txtDni.Text);
+                //cuota.Cliente = new E_Cliente();
+                //cuota.Cliente.Doc = Convert.ToInt32(txtDni.Text);
 
-                MessageBox.Show("DNI ingresado " + cuota.Cliente.Doc);
+                //MessageBox.Show("DNI ingresado " + cuota.Cliente.Doc);
+
+                //Clientes clientes = new Clientes();
+                //respuesta = clientes.BuscarClientePorDni(cuota.Cliente.Doc);
 
                 Clientes clientes = new Clientes();
-                respuesta = clientes.BuscarClientePorDni(cuota.Cliente.Doc);
+                string resultado = clientes.BuscarClientePorDni(Convert.ToInt32(txtDni.Text));
 
-                if (respuesta == "0")
+                if (int.TryParse(resultado, out int id))
                 {
-                    MessageBox.Show("Cliente inexistente",
-                    "AVISO DEL SISTEMA", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                    if (id == 0)
+                    {
+                        MessageBox.Show("Cliente inexistente",
+                        "AVISO DEL SISTEMA", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        clienteId = id;
+
+                        MessageBox.Show($"Cliente encontrado: {resultado}",
+                        "AVISO DEL SISTEMA", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                        // Si el cliente existe, habilitamos el input del monto, el botón para cobrar y el label
+                        lblSocioNoSocio.Visible = true;
+
+                        btnCobrar.Enabled = true;
+                        btnCobrar.BackColor = Color.White;
+
+                        txtMonto.Enabled = true;
+                        txtMonto.BackColor = Color.White;
+                        txtMonto.Focus();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show($"Cliente encontrado: {respuesta}",
+                    MessageBox.Show($"Error al buscar el cliente: {resultado}",
                     "AVISO DEL SISTEMA", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
-                    // Si el cliente existe, habilitamos el input del monto, el botón para cobrar y el label
-                    lblSocioNoSocio.Visible = true;
-
-                    btnCobrar.Enabled = true;
-                    btnCobrar.BackColor = Color.White;
-
-                    txtMonto.Enabled = true;
-                    txtMonto.BackColor = Color.White;
-                    txtMonto.Focus();
+                    MessageBoxIcon.Error);
                 }
             }
         }
@@ -89,14 +108,30 @@ namespace DSOO_ProyectoIntegrador
                 string respuesta;
                 E_Cuota cuota = new E_Cuota();
                 cuota.Monto = Convert.ToInt32(txtMonto.Text);
+                cuota.IdCliente = clienteId;
 
-                cuota.Cliente = new E_Cliente();
                 MessageBox.Show("Monto ingresado " + cuota.Monto);
 
-                Form comprobante = new ComprobanteCobro();
-                comprobante.Show();
-                this.Close();
+                Datos.Cuotas cuotas = new Datos.Cuotas();
+                respuesta = cuotas.Cuota(cuota);
+
+                bool esnumero = int.TryParse(respuesta, out int codigo);
+                if (esnumero)
+                {
+                        int cuotaId = Convert.ToInt32(respuesta);
+                        Form comprobante = new ComprobanteCobro(clienteId, cuotaId);
+                        comprobante.Show();
+                        this.Close();
+                    
+                }
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            this.Hide();
         }
     }
 }

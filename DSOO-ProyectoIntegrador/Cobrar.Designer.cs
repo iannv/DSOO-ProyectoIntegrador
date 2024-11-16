@@ -36,6 +36,7 @@
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.lblSocioNoSocio = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -75,7 +76,7 @@
             this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCobrar.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCobrar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCobrar.Location = new System.Drawing.Point(311, 359);
+            this.btnCobrar.Location = new System.Drawing.Point(236, 351);
             this.btnCobrar.Name = "btnCobrar";
             this.btnCobrar.Size = new System.Drawing.Size(186, 46);
             this.btnCobrar.TabIndex = 22;
@@ -128,12 +129,29 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnVolver.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolver.Location = new System.Drawing.Point(441, 351);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(186, 46);
+            this.btnVolver.TabIndex = 27;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // Cobrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblSocioNoSocio);
             this.Controls.Add(this.txtMonto);
@@ -159,5 +177,6 @@
         private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.Label lblSocioNoSocio;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

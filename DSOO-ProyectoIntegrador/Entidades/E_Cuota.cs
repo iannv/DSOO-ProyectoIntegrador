@@ -13,6 +13,6 @@ namespace DSOO_ProyectoIntegrador.Entidades
         public float Monto { get; set; }
         public DateTime FechaPago { get; set; }
         public DateTime FechaVencimiento { get; set; }
-        public E_Cliente Cliente { get; set; }
+        //public E_Cliente Cliente { get; set; }
     }
 }

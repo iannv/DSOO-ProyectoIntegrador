@@ -44,6 +44,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +87,7 @@
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlBody.Controls.Add(this.btnVolver);
             this.pnlBody.Controls.Add(this.btnImprimir);
             this.pnlBody.Controls.Add(this.lblVtoC);
             this.pnlBody.Controls.Add(this.lblDniC);
@@ -110,7 +112,7 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnImprimir.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnImprimir.Location = new System.Drawing.Point(290, 241);
+            this.btnImprimir.Location = new System.Drawing.Point(175, 242);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(203, 52);
             this.btnImprimir.TabIndex = 25;
@@ -228,6 +230,22 @@
             this.lblNombre.TabIndex = 14;
             this.lblNombre.Text = "Nombre:";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnVolver.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolver.Location = new System.Drawing.Point(406, 242);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(203, 52);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // ComprobanteCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,5 +282,6 @@
         private System.Windows.Forms.Label lblVto;
         private System.Windows.Forms.Label lblVtoC;
         private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

@@ -24,8 +24,8 @@ namespace DSOO_ProyectoIntegrador.Datos
                 // Agregar parámetros para los campos de la tabla Cuota
                 comando.Parameters.Add("IdCliente", MySqlDbType.Int32).Value = cuota.IdCliente;
                 comando.Parameters.Add("Monto", MySqlDbType.Float).Value = cuota.Monto;
-                comando.Parameters.Add("FechaPago", MySqlDbType.Date).Value = cuota.FechaPago;
-                comando.Parameters.Add("FechaVencimiento", MySqlDbType.Date).Value = cuota.FechaVencimiento;
+                comando.Parameters.Add("FechaPago", MySqlDbType.Date).Value = DateTime.Today;
+                //comando.Parameters.Add("FechaVencimiento", MySqlDbType.Date).Value = cuota.FechaVencimiento;
 
                 // Parámetros de salida para capturar la respuesta del procedimiento
                 MySqlParameter ParCodigo = new MySqlParameter();

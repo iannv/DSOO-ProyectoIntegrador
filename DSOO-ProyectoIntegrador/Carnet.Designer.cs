@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carnet));
             this.pnlCarnet = new System.Windows.Forms.Panel();
+            this.lblSocioNoSocio = new System.Windows.Forms.Label();
+            this.picCarnet = new System.Windows.Forms.PictureBox();
             this.lblNumCarnetA = new System.Windows.Forms.Label();
             this.lblDniA = new System.Windows.Forms.Label();
             this.lblApellidoA = new System.Windows.Forms.Label();
@@ -42,9 +44,8 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.picCarnet = new System.Windows.Forms.PictureBox();
-            this.lblSocioNoSocio = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.pnlCarnet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCarnet)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +71,27 @@
             this.pnlCarnet.Name = "pnlCarnet";
             this.pnlCarnet.Size = new System.Drawing.Size(577, 340);
             this.pnlCarnet.TabIndex = 0;
+            // 
+            // lblSocioNoSocio
+            // 
+            this.lblSocioNoSocio.AutoSize = true;
+            this.lblSocioNoSocio.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSocioNoSocio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
+            this.lblSocioNoSocio.Location = new System.Drawing.Point(384, 287);
+            this.lblSocioNoSocio.Name = "lblSocioNoSocio";
+            this.lblSocioNoSocio.Size = new System.Drawing.Size(84, 26);
+            this.lblSocioNoSocio.TabIndex = 15;
+            this.lblSocioNoSocio.Text = "________";
+            // 
+            // picCarnet
+            // 
+            this.picCarnet.Image = ((System.Drawing.Image)(resources.GetObject("picCarnet.Image")));
+            this.picCarnet.Location = new System.Drawing.Point(63, 113);
+            this.picCarnet.Name = "picCarnet";
+            this.picCarnet.Size = new System.Drawing.Size(191, 175);
+            this.picCarnet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCarnet.TabIndex = 14;
+            this.picCarnet.TabStop = false;
             // 
             // lblNumCarnetA
             // 
@@ -205,27 +227,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "________________________________________________________________";
             // 
-            // picCarnet
-            // 
-            this.picCarnet.Image = ((System.Drawing.Image)(resources.GetObject("picCarnet.Image")));
-            this.picCarnet.Location = new System.Drawing.Point(63, 113);
-            this.picCarnet.Name = "picCarnet";
-            this.picCarnet.Size = new System.Drawing.Size(191, 175);
-            this.picCarnet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCarnet.TabIndex = 14;
-            this.picCarnet.TabStop = false;
-            // 
-            // lblSocioNoSocio
-            // 
-            this.lblSocioNoSocio.AutoSize = true;
-            this.lblSocioNoSocio.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSocioNoSocio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
-            this.lblSocioNoSocio.Location = new System.Drawing.Point(384, 287);
-            this.lblSocioNoSocio.Name = "lblSocioNoSocio";
-            this.lblSocioNoSocio.Size = new System.Drawing.Size(84, 26);
-            this.lblSocioNoSocio.TabIndex = 15;
-            this.lblSocioNoSocio.Text = "________";
-            // 
             // btnImprimir
             // 
             this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
@@ -234,7 +235,7 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnImprimir.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnImprimir.Location = new System.Drawing.Point(353, 402);
+            this.btnImprimir.Location = new System.Drawing.Point(264, 399);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(158, 39);
             this.btnImprimir.TabIndex = 21;
@@ -242,12 +243,29 @@
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnVolver.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolver.Location = new System.Drawing.Point(442, 399);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(158, 39);
+            this.btnVolver.TabIndex = 22;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // Carnet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.pnlCarnet);
             this.Name = "Carnet";
@@ -278,5 +296,6 @@
         private System.Windows.Forms.PictureBox picCarnet;
         public System.Windows.Forms.Label lblSocioNoSocio;
         private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
