@@ -24,7 +24,7 @@ namespace DSOO_ProyectoIntegrador
             this.servidor = "localhost";
             this.puerto = "3306";
             this.usuario = "root";
-            this.clave = "12345678";
+            this.clave = "t4a529fcmk";
         }
         public MySqlConnection CrearConexion()
         {

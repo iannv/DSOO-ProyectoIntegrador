@@ -47,7 +47,7 @@ namespace DSOO_ProyectoIntegrador
         {
             Form listadoVencimiento = new ListadoVencimientos();
             listadoVencimiento.Show();
-            this.Show();
+            this.Hide();
         }
 
         private void btnCobrar_Click(object sender, EventArgs e)

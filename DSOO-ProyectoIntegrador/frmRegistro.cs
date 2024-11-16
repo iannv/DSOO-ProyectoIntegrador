@@ -112,15 +112,5 @@ namespace DSOO_ProyectoIntegrador
             principal.Show();
             this.Hide();
         }
-
-        private void frmRegistro_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -16,7 +16,11 @@ namespace DSOO_ProyectoIntegrador
 {
     public partial class Cobrar : Form
     {
+        MySqlConnection sqlCon;
+        MySqlDataAdapter adapter;
+
         private int clienteId;
+
         public Cobrar()
         {
             InitializeComponent();
@@ -36,6 +40,9 @@ namespace DSOO_ProyectoIntegrador
         // Función para buscar al cliente
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            sqlCon = Conexion.getInstancia().CrearConexion();
+            sqlCon.Open();
+
             if (txtDni.Text == "")
             {
                 MessageBox.Show("Debe ingresar el DNI",
@@ -44,17 +51,6 @@ namespace DSOO_ProyectoIntegrador
             }
             else
             {
-                //string respuesta;
-                //E_Cuota cuota = new E_Cuota();
-
-                //cuota.Cliente = new E_Cliente();
-                //cuota.Cliente.Doc = Convert.ToInt32(txtDni.Text);
-
-                //MessageBox.Show("DNI ingresado " + cuota.Cliente.Doc);
-
-                //Clientes clientes = new Clientes();
-                //respuesta = clientes.BuscarClientePorDni(cuota.Cliente.Doc);
-
                 Clientes clientes = new Clientes();
                 string resultado = clientes.BuscarClientePorDni(Convert.ToInt32(txtDni.Text));
 
@@ -83,6 +79,9 @@ namespace DSOO_ProyectoIntegrador
                         txtMonto.Enabled = true;
                         txtMonto.BackColor = Color.White;
                         txtMonto.Focus();
+
+                        // Verifica si es socio o no socio
+                        VerificarSocio(clienteId);
                     }
                 }
                 else
@@ -93,6 +92,49 @@ namespace DSOO_ProyectoIntegrador
                 }
             }
         }
+
+
+        private void VerificarSocio(int clienteId)
+        {
+            MySqlConnection sqlCon = Conexion.getInstancia().CrearConexion();
+            try
+            {
+                sqlCon.Open();
+
+                string query = "SELECT socio FROM cliente WHERE idCliente = " + clienteId;
+
+                MySqlCommand cmd = new MySqlCommand(query, sqlCon);
+
+                // Ejecuta la consulta y obtiene el valor de la columna socio
+                object resultado = cmd.ExecuteScalar();
+
+                if (resultado != null)
+                {
+                    int socio = Convert.ToInt32(resultado);
+                    if (socio == 1)
+                    {
+                        lblSocioNoSocio.Text = "El SOCIO debe pagar la cuota mensual";
+                    }
+                    else
+                    {
+                        lblSocioNoSocio.Text = "El NO SOCIO debe pagar por la actividad";
+                    }
+                }
+                else
+                {
+                    lblSocioNoSocio.Text = "Cliente no encontrado";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
+
 
         // Función para cobrar la cuota y mostrar los datos del cliente en el comprobante
         private void btnCobrar_Click(object sender, EventArgs e)

@@ -69,7 +69,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(288, 28);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Registro de Nuevo Cliente";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // lblNombre
             // 
@@ -403,7 +402,6 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmRegistro";
             this.Text = "frmRegistro";
-            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
