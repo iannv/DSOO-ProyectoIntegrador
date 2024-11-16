@@ -104,10 +104,25 @@
     <Compile Include="Carnet.Designer.cs">
       <DependentUpon>Carnet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobrar.Designer.cs">
+      <DependentUpon>Cobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComprobanteCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprobanteCobro.Designer.cs">
+      <DependentUpon>ComprobanteCobro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datos\Clientes.cs" />
     <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\Cuotas.cs" />
     <Compile Include="Datos\Usuarios.cs" />
+    <Compile Include="Entidades\E_Actividad.cs" />
     <Compile Include="Entidades\E_Cliente.cs" />
+    <Compile Include="Entidades\E_Cuota.cs" />
     <Compile Include="frmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +141,12 @@
     <Compile Include="frmRegistro.Designer.cs">
       <DependentUpon>frmRegistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoVencimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoVencimientos.Designer.cs">
+      <DependentUpon>ListadoVencimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="PagoInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +158,12 @@
     <EmbeddedResource Include="Carnet.resx">
       <DependentUpon>Carnet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cobrar.resx">
+      <DependentUpon>Cobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComprobanteCobro.resx">
+      <DependentUpon>ComprobanteCobro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIngreso.resx">
       <DependentUpon>frmIngreso.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoVencimientos.resx">
+      <DependentUpon>ListadoVencimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PagoInicial.resx">
       <DependentUpon>PagoInicial.cs</DependentUpon>

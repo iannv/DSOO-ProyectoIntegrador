@@ -32,6 +32,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.btnVerCarnet = new System.Windows.Forms.Button();
+            this.btnListadoVenc = new System.Windows.Forms.Button();
+            this.btnCobrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblIngresar
@@ -69,7 +71,7 @@
             this.btnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistro.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegistro.Location = new System.Drawing.Point(259, 80);
+            this.btnRegistro.Location = new System.Drawing.Point(53, 90);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(263, 103);
             this.btnRegistro.TabIndex = 2;
@@ -84,12 +86,44 @@
             this.btnVerCarnet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerCarnet.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerCarnet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnVerCarnet.Location = new System.Drawing.Point(259, 267);
+            this.btnVerCarnet.Location = new System.Drawing.Point(53, 249);
             this.btnVerCarnet.Name = "btnVerCarnet";
             this.btnVerCarnet.Size = new System.Drawing.Size(263, 103);
             this.btnVerCarnet.TabIndex = 3;
             this.btnVerCarnet.Text = "Ver Carnet";
             this.btnVerCarnet.UseVisualStyleBackColor = false;
+            // 
+            // btnListadoVenc
+            // 
+            this.btnListadoVenc.AutoEllipsis = true;
+            this.btnListadoVenc.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnListadoVenc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListadoVenc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListadoVenc.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListadoVenc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnListadoVenc.Location = new System.Drawing.Point(431, 90);
+            this.btnListadoVenc.Name = "btnListadoVenc";
+            this.btnListadoVenc.Size = new System.Drawing.Size(263, 103);
+            this.btnListadoVenc.TabIndex = 4;
+            this.btnListadoVenc.Text = "Listado de Vencimientos";
+            this.btnListadoVenc.UseVisualStyleBackColor = false;
+            this.btnListadoVenc.Click += new System.EventHandler(this.btnListadoVenc_Click);
+            // 
+            // btnCobrar
+            // 
+            this.btnCobrar.AutoEllipsis = true;
+            this.btnCobrar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCobrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCobrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCobrar.Location = new System.Drawing.Point(431, 249);
+            this.btnCobrar.Name = "btnCobrar";
+            this.btnCobrar.Size = new System.Drawing.Size(263, 103);
+            this.btnCobrar.TabIndex = 5;
+            this.btnCobrar.Text = "Cobrar";
+            this.btnCobrar.UseVisualStyleBackColor = false;
+            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
             // 
             // frmPrincipal
             // 
@@ -97,6 +131,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCobrar);
+            this.Controls.Add(this.btnListadoVenc);
             this.Controls.Add(this.btnVerCarnet);
             this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.btnSalir);
@@ -115,5 +151,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnVerCarnet;
+        private System.Windows.Forms.Button btnListadoVenc;
+        private System.Windows.Forms.Button btnCobrar;
     }
 }

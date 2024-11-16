@@ -90,3 +90,6 @@ D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DS
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmRegistro.resources
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.PagoInicial.resources
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.Carnet.resources
+D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.Cobrar.resources
+D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.ListadoVencimientos.resources
+D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.ComprobanteCobro.resources

@@ -52,5 +52,39 @@ namespace DSOO_ProyectoIntegrador.Datos
             return salida;
 
         }
+
+        // Función para buscar al cliente por el DNI (para cobrar)
+        public string BuscarClientePorDni(int dni)
+        {
+            string salida;
+            MySqlConnection sqlCon = new MySqlConnection();
+
+            try
+            {
+                sqlCon = Conexion.getInstancia().CrearConexion();
+                MySqlCommand conex = new MySqlCommand(
+                    "SELECT idCliente FROM cliente WHERE Dni = @Dni;", // Busca al cliente que coincida con el parámetro DNI ingresado
+                    sqlCon);
+                conex.Parameters.AddWithValue("@Dni", dni);
+
+                sqlCon.Open();
+                object result = conex.ExecuteScalar();
+
+                salida = result != null ? result.ToString() : "0"; // Si no encuentra al cliente retorna 0
+            }
+            catch (Exception ex)
+            {
+                salida = ex.Message;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                {
+                    sqlCon.Close();
+                }
+            }
+
+            return salida;
+        }
     }
 }

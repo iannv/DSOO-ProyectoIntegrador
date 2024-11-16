@@ -42,5 +42,19 @@ namespace DSOO_ProyectoIntegrador
             carnet.Show();
             this.Hide();
         }
+
+        private void btnListadoVenc_Click(object sender, EventArgs e)
+        {
+            Form listadoVencimiento = new ListadoVencimientos();
+            listadoVencimiento.Show();
+            this.Show();
+        }
+
+        private void btnCobrar_Click(object sender, EventArgs e)
+        {
+            Form cobrar = new Cobrar();
+            cobrar.Show();
+            this.Hide();
+        }
     }
 }

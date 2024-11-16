@@ -9,7 +9,6 @@ namespace DSOO_ProyectoIntegrador.Entidades
 {
     public class E_Cliente
     {
-
         public int IdCliente { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -21,6 +20,5 @@ namespace DSOO_ProyectoIntegrador.Entidades
         public bool AptoFisico { get; set; }
         public int NumCarnet { get; set; }
         public bool Socio { get; set; }
-
     }
 }
