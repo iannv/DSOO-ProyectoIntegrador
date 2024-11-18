@@ -67,5 +67,12 @@ namespace DSOO_ProyectoIntegrador
             principal.Show();
             this.Hide();
         }
+
+        private void btnCobrar_Click(object sender, EventArgs e)
+        {
+            Form cobrar = new Cobrar();
+            cobrar.Show();
+            this.Hide();
+        }
     }
 }

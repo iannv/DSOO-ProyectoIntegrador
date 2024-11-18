@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.btnCobrar = new System.Windows.Forms.Button();
             this.pnlCarnet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCarnet)).BeginInit();
             this.SuspendLayout();
@@ -235,7 +236,7 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnImprimir.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnImprimir.Location = new System.Drawing.Point(264, 399);
+            this.btnImprimir.Location = new System.Drawing.Point(123, 399);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(158, 39);
             this.btnImprimir.TabIndex = 21;
@@ -251,7 +252,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnVolver.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnVolver.Location = new System.Drawing.Point(442, 399);
+            this.btnVolver.Location = new System.Drawing.Point(542, 399);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(158, 39);
             this.btnVolver.TabIndex = 22;
@@ -259,12 +260,29 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // btnCobrar
+            // 
+            this.btnCobrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.btnCobrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCobrar.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCobrar.Location = new System.Drawing.Point(338, 399);
+            this.btnCobrar.Name = "btnCobrar";
+            this.btnCobrar.Size = new System.Drawing.Size(158, 39);
+            this.btnCobrar.TabIndex = 23;
+            this.btnCobrar.Text = "COBRAR";
+            this.btnCobrar.UseVisualStyleBackColor = false;
+            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
+            // 
             // Carnet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(63)))), ((int)(((byte)(99)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCobrar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.pnlCarnet);
@@ -297,5 +315,6 @@
         public System.Windows.Forms.Label lblSocioNoSocio;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnCobrar;
     }
 }

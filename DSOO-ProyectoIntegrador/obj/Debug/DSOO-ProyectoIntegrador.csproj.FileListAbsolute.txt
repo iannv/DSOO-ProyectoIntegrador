@@ -88,7 +88,6 @@ C:\Users\Feli\src\Tecnicatura IFTS 29\2°C-1°A\Desarrollo de Sistemas Orientado
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmIngreso.resources
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmPrincipal.resources
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.frmRegistro.resources
-D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.PagoInicial.resources
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.Carnet.resources
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.Cobrar.resources
 D:\Programación\DESARROLLO DE SOFTWARE\C# Ejercicios\DSOO-ProyectoIntegrador\DSOO-ProyectoIntegrador\obj\Debug\DSOO_ProyectoIntegrador.ListadoVencimientos.resources

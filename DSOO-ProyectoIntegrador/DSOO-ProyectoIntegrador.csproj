@@ -51,6 +51,7 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.9.0.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
@@ -147,12 +148,6 @@
     <Compile Include="ListadoVencimientos.Designer.cs">
       <DependentUpon>ListadoVencimientos.cs</DependentUpon>
     </Compile>
-    <Compile Include="PagoInicial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PagoInicial.Designer.cs">
-      <DependentUpon>PagoInicial.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Carnet.resx">
@@ -175,9 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoVencimientos.resx">
       <DependentUpon>ListadoVencimientos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PagoInicial.resx">
-      <DependentUpon>PagoInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
