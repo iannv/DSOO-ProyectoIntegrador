@@ -12,7 +12,7 @@ using MySql.Data.MySqlClient;
 
 namespace DSOO_ProyectoIntegrador
 {
-    internal class Conexion
+    public class Conexion
     {       
         private string baseDatos;
         private string servidor;
@@ -26,7 +26,7 @@ namespace DSOO_ProyectoIntegrador
             this.servidor = "localhost";
             this.puerto = "3306";
             this.usuario = "root";
-            this.clave = "t4a529fcmk";
+            this.clave = "";
 
             //bool correcto = false;
             //int mensaje;
